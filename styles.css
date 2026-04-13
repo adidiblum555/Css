@@ -1,0 +1,469 @@
+body {
+    font-family: Calibri;
+    display: grid;
+    margin: 0;
+}
+
+.title {
+    margin-right: auto;
+    font-size: 1rem;
+
+}
+
+.navImg {
+    border-radius: 50%;
+    width: 1rem;
+    height: 1rem;
+}
+
+.navItem {
+    padding: 0.5rem;
+}
+
+
+
+.navWrap {
+    display: block;
+    background-color: rgb(0, 0, 148);
+    width: 100vw;
+}
+
+.navContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    align-self: flex-start;
+    gap: 1rem;
+    color: white;
+}
+
+.topNav {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 4rem;
+}
+
+.navBar {
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgb(0, 0, 148);
+    width: 80rem;
+    height: 4rem;
+    padding: 4.5rem;
+    gap: 3rem;
+    position: relative;
+}
+
+
+.options {
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 1rem;
+    border-radius: 0.1rem;
+    box-sizing: border-box;
+}
+
+.option {
+    padding: 0.4rem;
+    border: 0.1rem solid transparent;
+    ;
+}
+
+.option:hover {
+    border: 0.1rem solid white;
+    border-radius: 1rem;
+    opacity: 0.4;
+}
+
+.navBtn {
+    background-color: white;
+    color: rgb(0, 0, 148);
+    border-radius: 0.4rem;
+    width: 5rem;
+    height: 3rem;
+    margin-bottom: -4rem;
+}
+
+#dropdown{
+    position: relative;
+}
+
+.dropdownContent{
+    display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 130px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+border-radius: 0.4rem;
+  
+}
+
+#text{
+        font-family: Calibri;
+    width: 7rem;
+    height: 1rem;
+    direction: ltr;
+}
+.submitBtn{
+      background-color: rgb(102, 145, 247);
+    color: white;
+    margin: 1rem;
+    width: 5rem;
+    height: 3rem;
+    border: solid 0.5rem white;
+    border-radius: 0.1rem;
+}
+
+.submitBtn:hover {
+    box-shadow: 0rem 0.3rem 0.5rem rgba(230, 227, 237, 0.4);
+    transform: translateY(-0.1rem);
+
+}
+#dropdown:hover .dropdownContent{
+      display: block;
+}
+
+.navItem:hover {
+    box-shadow: 0rem 0.3rem 0.5rem rgba(242, 241, 243, 0.4);
+    border-radius: 0.4rem;
+    height: 1rem;
+}
+
+.filterWrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: -5rem;
+    position: relative;
+}
+
+.filter {
+    font-family: Calibri;
+    width: 24rem;
+    height: 3rem;
+    direction: ltr;
+    border-radius: 0.4rem;
+    border: 0.4rem solid rgb(255, 246, 82);
+}
+
+
+
+.searchBtn {
+    background-color: rgb(102, 145, 247);
+    color: white;
+    width: 5rem;
+    height: 3rem;
+    border-radius: 0.4rem;
+    border: 0.5rem solid rgb(255, 246, 82);
+}
+
+
+
+.searchBtn:hover {
+    box-shadow: 0rem 0.3rem 0.5rem rgba(230, 227, 237, 0.4);
+    transform: translateY(-0.1rem);
+
+}
+
+.links {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    margin-left: 1.5rem;
+    gap: 1rem;
+}
+
+.link {
+    color: rgb(0, 0, 148);
+}
+
+.filterContainer {
+    width: 80rem;
+    margin: 4rem auto;
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.4rem;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.borderImg {
+    position: absolute;
+}
+
+
+
+.filterLinksContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+
+
+.content{
+    width: 65rem;
+}
+
+.container div.header {
+    grid-area: header;
+    text-align: center;
+}
+
+.container div.menu {
+   
+    grid-area: menu;
+    text-align: left;
+}
+
+.menuWrap{
+    height: 85rem;
+    display: block;
+}
+
+.menuContentWrap {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 4rem;
+}
+
+
+.contentContainer {
+    max-width: 80rem;
+    margin: 7rem auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+
+.menuFilter {
+    display: block;
+    border: 0.1rem solid rgb(172, 169, 169);
+    border-radius: 0.4rem;
+    box-shadow: 1rem;
+    direction: ltr;
+}
+
+
+
+
+
+
+
+.numbers {
+    float: right;
+    font-size: 0.7rem;
+    color: black;
+}
+
+.container div.content {
+    grid-area: content;
+    text-align: center;
+}
+
+.contentImg {
+    border-radius: 0.4rem;
+    width: 15rem;
+    height: 15rem;
+    margin: 0.5rem;
+}
+
+.contentDiv {
+    display: flex;
+    flex-direction: row-reverse;
+    border: 0.3rem solid rgb(101, 185, 246);
+    border-radius: 0.4rem;
+    gap: 1rem;
+    width: 54rem;
+    height: 16rem;
+    margin: 1rem;
+    position: relative;
+}
+
+.contentDiv:hover {
+    background-color: rgb(154, 216, 243);
+    box-shadow: 0rem 0.4rem 0.5rem rgb(154, 216, 243);
+
+}
+
+
+.contentText {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 0.9rem;
+    gap: 1rem;
+    margin-right: 1rem;
+}
+
+.mapImgBorder {
+    position: relative;
+    display: block;
+}
+
+.mapImg {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.mapDiv {}
+
+.showBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(102, 145, 247);
+    color: white;
+    width: 10rem;
+    height: 3rem;
+    text-align: center;
+    border-radius: 0.4rem;
+    position: absolute;
+    top: 65%;
+    margin-left: 6rem;
+}
+
+
+.showBtn:hover {
+    box-shadow: 0rem 0.3rem 0.5rem rgba(11, 2, 33, 0.4);
+}
+
+.hotelImgBorder {
+    position: relative;
+    width: 16rem;
+}
+
+
+.hotelImg {
+    display: block;
+    width: 100%;
+}
+
+.deleteImg{
+  position: absolute;
+    top: 0;
+    left: 0;
+    width: 4rem;
+    margin-top: 1rem;
+    margin-left: 1rem;
+}
+
+
+
+.heartImg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 4rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+}
+
+.circleImg {
+    border-radius: 50%;
+    width: 3rem;
+    height: 3rem;
+    border: 0.1rem solid black;
+}
+
+.circleImg:hover {
+     box-shadow: 0rem 0.3rem 0.5rem rgba(223, 223, 228, 0.4);
+
+}
+
+.rateText {
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 1rem;
+}
+
+.rateReview {
+    line-height: 0.5;
+}
+
+.rateNumber {
+
+    background-color: rgb(0, 0, 148);
+    margin: 1rem;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 0.4rem;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contentBtn {
+    background-color: rgb(102, 145, 247);
+    border: 0.1rem solid white;
+    color: white;
+    width: 6rem;
+    height: 3rem;
+    border-radius: 0.4rem;
+}
+
+.contentBtn:hover {
+    box-shadow: 0rem 0.3rem 0.5rem rgb(45 35 66 / 40%) #3c4fe0;
+}
+
+.sortBtn {
+    border-radius: 1rem;
+    border: 0.1rem solid black;
+    width: 10rem;
+    height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.hDiv{
+    color:  rgb(102, 145, 247);
+}
+
+.gridBtn {
+    display: flex;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+.listBtn {
+    border-radius: 1rem;
+    border: 0.1rem solid black;
+    width: 3rem;
+    height: 1rem;
+    background-color: white;
+}
+
+.listBtn:hover {
+     box-shadow: 0rem 0.3rem 0.5rem rgba(26, 26, 27, 0.4);
+}
+
+.listGridContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 6rem;
+    height: 1.5rem;
+    border-radius: 1rem;
+    border: 0.1rem solid black;
+    background-color: rgb(220, 215, 218);
+    margin-left: auto;
+}
+
+.topContent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}

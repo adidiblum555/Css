@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html dir="rtl">
+
+<head>
+    <title>booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body onload="onLoad()">
+    <div class="flexConatiner">
+        <div class="container">
+            <div class="header">
+
+
+                <div class="filterWrap">
+                    <div class="filterLinksContainer">
+                        <div class="navWrap">
+                            <div class="navBar">
+                                <div class="navContainer">
+                                    <div class="title"><strong>Booking.com</strong></div>
+                                    <div class="navItem">ILS</div>
+                                    <div class="navItem"><img src="usa.png" alt="usa image" class="navImg"></div>
+                                    <div class="navItem"><img src="questionCircle.png" alt="question image"
+                                            class="navImg" style="border:1px solid black;"></div>
+                                    <div class="navItem"> List your property</div>
+                                    <div class="navItem"><button class="navBtn">Register</button></div>
+                                    <div class="navItem"><button class="navBtn">Sign in</button></div>
+                                    <div class="navItem" id="dropdown"><button class="navBtn">Add hotel</button>
+                                        <div class="dropdownContent"><input type="textarea"
+                                                placeholder="Enter hotel name" id="text"> <button onclick="info()"
+                                                class="submitBtn"> submit</button> </div>
+                                    </div>
+                                </div>
+
+
+                                <div class="options" style="color: white;">
+                                    <div class="option">&#9978; Stayes</div>
+                                    <div class="option">&#128744; Flights</div>
+                                    <div class="option">&#128664; Car rental</div>
+                                    <div class="option">&#128676; Attractions</div>
+                                    <div class="option">&#128661; Airport taxis</div>
+                                </div>
+
+
+                                <div class="filterContainer" style=" display: inline-block;">
+
+                                    <div
+                                        style="   background-color: yellow; display: inline-block;     box-sizing: border-box ">
+                                        <button class="searchBtn">Search</button>
+                                        <input class="filter" type="search"
+                                            value="&#128100; 2 Adults - 2 Children - 1 room">
+                                        <input class="filter" type="search" value="&#128197; Check in - Checkout date">
+                                        <input class="filter" type="search" value=" &#128719; New York">
+                                    </div>
+
+                                    <div class="links">
+                                        <a href="" class="link">Home > </a>
+                                        <a href="" class="link">United States ></a>
+                                        <a href="" class="link">New York State ></a>
+                                        <a href="">New York ></a>
+                                        <a style="color: black;" href="">Search reasults ></a>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <br>
+            </div>
+
+            <div class="contentContainer">
+
+                <div class="menuContentWrap">
+                    <div class="menuWrap">
+                        <div class="menu">
+                            <div class="menuFilter">
+
+
+                                <div class="mapImgBorder">
+                                    <div class="mapDiv"><img src="map.png" alt="map image" class="mapImg">
+                                    </div>
+                                    <div class="showBtn">Show on map</div>
+                                </div>
+
+
+
+                            </div>
+
+                            <div class="menuFilter">
+                                <h3>Filter by:</h3>
+                            </div>
+
+                            <div class="menuFilter">
+                                <h3>Popular filters:</h3>
+                                <input type="checkbox" id="item1" onchange="order()" class="filterBtn">
+                                <label for="item1"> Hotels</label> <label for="item1" class="numbers">446</label> <br>
+                                <input type="checkbox" id="item2" onchange="order()" class="filterBtn">
+                                <label for="item2"> 5 Stars</label> <label for="item2" class="numbers">73</label> <br>
+                                <input type="checkbox" id="item3" onchange="order()" class="filterBtn">
+                                <label for="item3"> Apartments</label> <label for="item3" class="numbers">931</label>
+                                <br>
+                                <input type="checkbox" id="item4" onchange="order()" class="filterBtn">
+                                <label for="item4"> Wonderful 9+ <br> <span
+                                        style=" font-family: Calibri; opacity: 0.4; margin-left: 22px;">Based on guest
+                                        reviews</span></label> <label for="item4" class="numbers">223</label><br>
+                                <input type="checkbox" id="item5" onchange="order()" class="filterBtn">
+                                <label for="item5"> Private bathroom</label> <label for="item5"
+                                    class="numbers">1263</label>
+                                <br>
+                                <input type="checkbox" id="item6" onchange="order()" class="filterBtn">
+                                <label for="item6"> Kitchen/Kitchenette</label> <label for="item6"
+                                    class="numbers">1028</label>
+                                <br>
+                                <input type="checkbox" id="item7" onchange="order()" class="filterBtn">
+                                <label for="item7"> Free Wifi</label> <label for="item7" class="numbers">1392</label>
+                                <br>
+                                <input type="checkbox" id="item8" onchange="order()" class="filterBtn">
+                                <label for="item8"> Air conditioing</label> <label for="item3"
+                                    class="numbers">1389</label>
+                                <br>
+                            </div>
+
+                            <div class="menuFilter">
+                                <h3>Property Type</h3>
+                                <input type="checkbox" id="item1">
+                                <label for="item1"> Hotels</label> <label for="item1" class="numbers">446</label> <br>
+                                <input type="checkbox" id="item2">
+                                <label for="item2"> 5 Stars</label> <label for="item2" class="numbers">73</label> <br>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="content">
+
+
+                        <h1 style="text-align: left;  display: inline-block;">New York: 1,460 properties match your
+                            search </h1>
+
+                        <div class="listGridContainer">
+                            <div class="gridBtn">Grid
+                                <div class="listBtn"> List </div>
+                            </div>
+                        </div>
+                        <br>
+
+                        <div class="sortBtn"> Sort by:Our top picks &#8645;</div>
+
+                        <div id="hotelsDiv" style="height: 85rem; ">
+                            <div class="contentDiv" id="1">
+
+                                <div class="hotelImgBorder">
+                                    <div class="hotelImg"><img src="hilton.png" alt="Hilton image" class="contentImg">
+                                    </div>
+                                    <div class="heartImg"><img src="heartCircle.png" class="circleImg" id="heart1"
+                                            onclick="clickHeart('heart1')"></div>
+                                </div>
+
+                                <div class="delteImgBorder">
+                                    <div class="deleteImg"><img src="delete.png" class="circleImg" id="delete1"
+                                            onclick="deleteHotel('delete1')"></div>
+                                </div>
+
+
+                                <div class="contentText">
+                                    <h2 class="hDiv">
+                                        <span
+                                            style="font-size: 0.6em; direction: ltr;">&#128077;&#127775;&#127775;&#127775;&#127775;
+                                        </span>
+                                        New York Hilton Midtown
+                                    </h2>
+                                    <div>Manhttan, New York 0.7 km from downtown Subway access </div>
+                                    <div style="direction: ltr;">
+                                        <p class="pDiv">Sutainbillty certification &#127941; <br> <span
+                                                style="line-height: 0.5;">
+                                                located in midtown Nanhttan, this New York hotel is within a 10
+                                                minutes'
+                                                walk of both Central park and Times Square </span></p>
+                                    </div>
+                                </div>
+
+
+                                <div class="rateDiv">
+
+                                    <div class="rateText" style="width: 150px;">
+                                        <div>
+                                            <p><strong> Good </strong><br><span
+                                                    style="font-size: 12px; list-style: 0.5; opacity: 0.4;"> 1,801
+                                                    reviews
+                                                </span>
+                                                <br>
+                                            </p>
+                                        </div>
+
+                                        <div class="box" style="display: flex; flex-direction: column;">
+                                            <div class="rateNumber"><span style="font-size: 17px;"> 7.3 </span>
+                                            </div>
+                                            <div style="color:  rgb(102, 145, 247); font-weight: bold;">Location 9.3
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnBox">
+                                        <button class="contentBtn" onclick="sortContainer()">Show prices</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+
+
+
+
+
+                            <div class="contentDiv" id="2">
+
+                                <div class="hotelImgBorder">
+                                    <div class="hotelImg"><img src="marriott.png" alt="Hilton image" class="contentImg">
+                                    </div>
+                                    <div class="heartImg" onclick="clickSecondHeart"><img src="heartCircle.png"
+                                            class="circleImg" id="heart2" onclick="clickHeart('heart2')"></div>
+                                </div>
+                                <div class="delteImgBorder">
+                                    <div class="deleteImg"><img src="delete.png" class="circleImg" id="delete2"
+                                            onclick="deleteHotel('delete2')"></div>
+                                </div>
+
+                                <div class="contentText">
+                                    <h2 class="hDiv">
+                                        <span style="font-size: 0.6em;">&#128077;&#127775;&#127775;&#127775;&#127775;
+                                        </span>
+                                        New York Marriott Marquis
+                                    </h2>
+                                    <div id="check">Manhttan, New York 1.1 km from downtown Subway access </div>
+                                    <div>
+                                        <p class="pDiv"><span style="line-height: 0.5;"> Step into the energy of New
+                                                York City at New
+                                                York
+                                                Marriott Marquis, an iconic hotel in the heart of Manhattan's Times
+                                                Square.
+                                            </span></p>
+                                    </div>
+                                </div>
+
+
+                                <div class="rateDiv">
+
+                                    <div class="rateText" style="width: 150px;">
+                                        <div>
+                                            <p><strong> Very Good </strong><br><span
+                                                    style="font-size: 12px; list-style: 0.5; opacity: 0.4;"> 3,073
+                                                    reviews
+                                                </span>
+                                                <br>
+                                            </p>
+                                        </div>
+
+                                        <div class="box" style="display: flex; flex-direction: column;">
+                                            <div class="rateNumber"><span style="font-size: 17px;"> 8.4 </span> </div>
+                                            <div style="color:  rgb(102, 145, 247); font-weight: bold;">Location 9.6
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnBox">
+                                        <button class="contentBtn">Show prices</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="contentDiv" id="3">
+
+                                <div class="hotelImgBorder">
+                                    <div class="hotelImg"><img src="5thHilton.png" alt="Hilton image"
+                                            class="contentImg">
+                                    </div>
+                                    <div class="heartImg"><img src="heartCircle.png" class="circleImg" id="heart3"
+                                            onclick="clickHeart('heart3')"></div>
+                                </div>
+
+                                <div class="delteImgBorder">
+                                    <div class="deleteImg"><img src="delete.png" class="circleImg" id="delete3"
+                                            onclick="deleteHotel('delete3')"></div>
+                                </div>
+
+
+                                <div class="contentText">
+                                    <h2 class="hDiv">
+                                        <span
+                                            style="font-size: 0.6em; direction: ltr;">&#128077;&#127775;&#127775;&#127775;&#127775;
+                                        </span>
+                                        Hilton Club The Central at 5th New York
+                                    </h2>
+                                    <div>Manhttan, New York 0.7 km from downtown Subway access </div>
+                                    <div style="direction: ltr;">
+                                        <p class="pDiv">Sutainbillty certification &#127941; <br> <span
+                                                style="line-height: 0.5;">
+                                                located in midtown Nanhttan, this New York hotel is within a 10
+                                                minutes'
+                                                walk of both Central park and Times Square </span></p>
+                                    </div>
+                                </div>
+
+
+                                <div class="rateDiv">
+
+                                    <div class="rateText" style="width: 150px;">
+                                        <div>
+                                            <p><strong> Good </strong><br><span
+                                                    style="font-size: 12px; list-style: 0.5; opacity: 0.4;"> 1,801
+                                                    reviews
+                                                </span>
+                                                <br>
+                                            </p>
+                                        </div>
+
+                                        <div class="box" style="display: flex; flex-direction: column;">
+                                            <div class="rateNumber"><span style="font-size: 17px;"> 7.3 </span>
+                                            </div>
+                                            <div style="color:  rgb(102, 145, 247); font-weight: bold;">Location 9.3
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnBox">
+                                        <button class="contentBtn" onclick="sortContainer()">Show prices</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                            <div class="contentDiv" id="4">
+
+                                <div class="hotelImgBorder">
+                                    <div class="hotelImg"><img src="tempo.png" alt="Tempo image" class="contentImg">
+                                    </div>
+                                    <div class="heartImg"><img src="heartCircle.png" class="circleImg" id="heart4"
+                                            onclick="clickHeart('heart4')"></div>
+                                </div>
+                                <div class="delteImgBorder">
+                                    <div class="deleteImg"><img src="delete.png" class="circleImg" id="delete4"
+                                            onclick="deleteHotel('delete4')"></div>
+                                </div>
+
+
+                                <div class="contentText">
+                                    <h2 class="hDiv">
+                                        <span class="spanDiv"
+                                            style="font-size: 0.6em; direction: ltr;">&#128077;&#127775;&#127775;&#127775;&#127775;
+                                        </span>
+                                        Tempo By Hilton New York Times Square
+                                    </h2>
+                                    <div>Manhttan, New York 0.7 km from downtown Subway access </div>
+                                    <div style="direction: ltr;">
+                                        <p class="pDiv">Sutainbillty certification &#127941; <br> <span
+                                                style="line-height: 0.5;">
+                                                located in midtown Nanhttan, this New York hotel is within a 10
+                                                minutes'
+                                                walk of both Central park and Times Square </span></p>
+                                    </div>
+                                </div>
+
+
+                                <div class="rateDiv">
+
+                                    <div class="rateText" style="width: 150px;">
+                                        <div class="textDiv">
+                                            <p><strong> Good </strong><br><span
+                                                    style="font-size: 12px; list-style: 0.5; opacity: 0.4;"> 1,801
+                                                    reviews
+                                                </span>
+                                                <br>
+                                            </p>
+                                        </div>
+
+                                        <div class="box" style="display: flex; flex-direction: column;">
+                                            <div class="rateNumber"><span style="font-size: 17px;"> 7.3 </span>
+                                            </div>
+                                            <div style="color:  rgb(102, 145, 247); font-weight: bold;">Location 9.3
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="btnBox">
+                                        <button class="contentBtn">Show prices</button>
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+
+
+    </div>
+    <script src="test.js"></script>
+</body>
+
+</html>
